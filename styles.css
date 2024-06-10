@@ -1,0 +1,277 @@
+/* General stylings */ 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    margin: 5px auto auto 5px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5vw;
+}
+
+h1, h3, .category-container > p, #calc-button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+}
+
+p, input, label, span {
+    font-family: "Lato", sans-serif;
+}
+
+h3, .category-container p {
+    margin-top: 0;
+    
+}
+
+h3 {
+    font-size: 50px;
+}
+
+input {
+    background-color: inherit;
+    color: white;
+    border: none;
+    border-bottom: 1px white solid;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Bento-box styling */
+.bento-box {
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 0 black ;
+    transition: 0.3s;
+}
+
+.bento-box:hover {
+    background-color: #191919;
+    transform: translate(4px, -4px); 
+    box-shadow: -4px 4px black;
+}
+
+/* Header/Footer styling */
+.header-footer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    margin: 0px 0px 5px 5px;
+    padding: 50px;
+    border-radius: 20px 0 0 20px;    
+    color: white;
+
+    background-color: #232733;
+    background-image: url("images/header-background.jpg");
+    background-size: cover;
+    background-position: left;
+    background-blend-mode: luminosity;
+
+    box-shadow: 4px 4px #232733;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.header-footer:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px black;
+    background-color: unset;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: darkslategrey;
+    width: fit-content;
+    transition: 0.3s;
+    transform-origin: bottom left;
+}
+
+footer p:hover {
+    transform: scale(1.2);
+}
+
+.header-text p {
+    line-height: 25px;
+}
+
+/* Calculator bento-box layout styling */
+.category-title {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.category-title p {
+    margin-bottom: 7px;
+}
+
+/* Calculator grid layout styling */
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 400px 550px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        'budget accom'
+        'net food'
+        'net travel'
+        'net button';
+}
+
+/* Budget box styling */
+.budget-container {
+    grid-area: budget;
+
+    position: relative;
+}
+
+#budget-input {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+
+    margin: 0;
+}
+
+/* Result box styling */
+.net-result-container {
+    grid-area: net;
+
+    position: relative;
+}
+
+.net-result-container .output-container {
+    width: 100%;
+    border-bottom: 1px white solid;
+}
+
+.net-result-container .output-container .output-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 10px;
+}
+
+.net-result-container .output-container .output-item p {
+    margin: 0;
+}
+
+#net-result-output {
+    min-width: 170px;
+    font-size: 50px;
+    margin-top: 10px;
+
+    text-align: right;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    
+    position: absolute;
+    bottom: 100px;
+}
+
+#net-result-msg-output {
+    margin: 0;
+    margin-right: 30px;
+}
+
+#net-result-img-output {
+    margin: 0;
+    visibility: hidden; /* hidden by default */
+}
+
+/* Category box stylings */
+.accom-container {
+    grid-area: accom;
+}
+
+.food-container {
+    grid-area: food;
+}
+
+.travel-container {
+    grid-area: travel;
+}
+
+.button-container {
+    grid-area: button;
+    padding: 0;
+}
+
+/* container user input style */
+.input-container {
+    margin: 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Category input, output box stylings */
+.input-container input {
+    width: 80%;
+}
+
+.output-container {
+    margin-top: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.output-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* width: 100%; */
+}
+
+.output-item p {
+    margin-right: 50px;
+}
+
+.output-item span {
+    display: inline-block;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Calculator button styling */
+#calc-button {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+    border-radius: 20px;
+    border: none;
+    background-color: #191919;
+    color: white;
+    font-size: 80px;
+    transition: 0.3s;
+}
+
+#calc-button:hover {
+    background-color: orange;
+    color: black;
+}
+
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/calculation.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Web Design II - Assignment 1: Holiday Budget Calculator</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="bento-box budget-container">
+            <h3 class="box-title">BUDGET</h3>
+            
+            <input type="number" class="user-input large-num-display" id="budget-input" placeholder="$">
+        </div>
+
+        <div class="bento-box net-result-container">
+            <h3 class="box-title">TOTAL</h3>
+            <div class="output-container">
+                <div class="output-item">
+                    <p>Budget</p><span id="budget-output">$0.00</span>
+                </div>
+                <div class="output-item">
+                    <p>minus total expenses</p><span id="total-expenses-output">$0.00</span> 
+                </div>
+            </div>
+
+            <p id="net-result-output">$0.00</p>
+
+            <div class="message-container">
+                <h3 id="net-result-msg-output"></h3>
+                <img src="images/check.png" id="net-result-img-output" 
+                    alt="a green tick if you're on budget, a red cross if you're not on budget">
+            </div>
+        </div>
+
+        <div class="bento-box category-container accom-container">
+            <div class="category-title">
+                <p>ACCOMODATION</p><i class="fa-solid fa-hotel"></i>
+            </div>
+            
+
+            <div class="input-container">
+                <label for="hotel-input">Hotel</label>
+                <input type="number" class="user-input" id="hotel-input" placeholder="$">
+            </div>
+
+            <div class="input-container">
+                <label for="airbnb-input">Airbnb</label>
+                <input type="number" class="user-input" id="airbnb-input" placeholder="$">                
+            </div>
+
+            <div class="input-container">
+                <label for="motel-input">Motel</label>
+                <input type="number" class="user-input" id="motel-input" placeholder="$">                
+            </div>
+
+            <div class="output-container">
+                <div class="output-item">
+                    <p>Average </p><span class="average-output">$0.00</span>
+                </div>
+
+                <div class="output-item">
+                    <p>TOTAL </p><span class="subtotal-output">$0.00</span>                        
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-box category-container food-container">
+            <div class="category-title">
+                <p>FOOD</p><i class="fa-solid fa-utensils"></i>
+            </div>
+
+            <div class="input-container">
+                <label for="breakfast-input">Breakfast</label>
+                <input type="number" class="user-input" id="breakfast-input" placeholder="$">                
+            </div>
+
+            <div class="input-container">
+                <label for="lunch-input">Lunch</label>
+                <input type="number" class="user-input" id="lunch-input" placeholder="$">                
+            </div>
+            
+            <div class="input-container">
+                <label for="dinner-input">Dinner</label>
+                <input type="number" class="user-input" id="dinner-input" placeholder="$">                
+            </div>
+
+            <div class="output-container">
+                <div class="output-item">
+                    <p>Average </p><span class="average-output">$0.00</span>
+                </div>
+
+                <div class="output-item">
+                    <p>TOTAL </p><span class="subtotal-output">$0.00</span>                        
+                </div>          
+            </div>
+        </div>
+
+        <div class="bento-box category-container travel-container">
+            <div class="category-title">
+                <p>TRAVEL</p><i class="fa-solid fa-car"></i>
+            </div>
+
+            <div class="input-container">
+                <label for="uber-input">Uber</label>
+                <input type="number" class="user-input" id="uber-input" placeholder="$">                
+            </div>
+
+            <div class="input-container">
+                <label for="bus-input">Bus</label>
+                <input type="number" class="user-input" id="bus-input" placeholder="$">                
+            </div>
+
+            <div class="input-container">
+                <label for="train-input">Train</label>
+                <input type="number" class="user-input" id="train-input" placeholder="$">                
+            </div>
+
+            <div class="output-container">
+                <div class="output-item">
+                    <p>Average </p><span class="average-output">$0.00</span>
+                </div>
+
+                <div class="output-item">
+                    <p>TOTAL </p><span class="subtotal-output">$0.00</span>                        
+                </div>             
+            </div>
+        </div>
+
+        <div class="bento-box button-container">
+            <button id="calc-button" class="button">CALCULATE</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="header-footer">
+       <header>
+            <div class="header-text">
+                <h1>
+                    HOLIDAY
+                    <br>
+                    BUDGET
+                    <br>
+                    CALCULATOR
+                </h1>
+                <p>
+                    This holiday budget calculator is designed to provide an accurate
+                    <br>
+                    calculation of your next holiday budget and expenses
+                </p>
+            </div>
+        </header>
+
+        <footer>
+            <p>
+                Made in Meanjin (Brisbane, Australia) with great effort and much courage
+                <br>
+                by Harrison Z. Tang &copy; 2024 All Rights Reserved
+            </p> 
+        </footer>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
